@@ -13,7 +13,7 @@ def get_list(req, usd_info=["Price", "Mkt Cap"], change=["1h","24h","7d"], write
 	i=1
 	allstring = []
 	for r in req:
-		table = pd.read_html(r.text)[0]["Coin"]
+		table = pd.read_html(r.text)[0][["Coin", "Price", "Mkt Cap"]]
 		#table = pd.read_html(r.text)[0][["Coin", "Price", "Mkt Cap"]]
 		#table = pd.read_html(r.text)[0][["Coin", "Price", "Mkt Cap", "24h","7d"]]
 		#table = pd.read_html(r.text)[0][usd_info]
