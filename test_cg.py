@@ -12,3 +12,6 @@ for s in fields[1], fields[2]:
 	table[s] = table [s].apply(lambda x: x.replace(",","").replace("$",""))
 
 print(table)
+
+name ="TopCMC_test.csv"
+table.to_csv(name, index=False)
