@@ -32,7 +32,7 @@ def get_list(req, usd_info=["Price", "Mkt Cap"], change=["1h","24h","7d"], write
 	return allstring
 
 main = "https://www.coingecko.com/en"
-content = get_content(main, 2)
+content = get_content(main, 6)
 data = get_list(content, write_csv=True)
 
 print(data)
